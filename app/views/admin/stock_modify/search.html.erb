@@ -22,7 +22,7 @@
       <th>実在庫数</th>
       <th>在庫調整</th>
     </tr>
-<%unless @product_styles.blank?%>	
+<%unless @product_styles.blank?%>
     <% @product_styles.each do | ps | %>
       <tr>
         <td><%= h ps.product_id %></td>

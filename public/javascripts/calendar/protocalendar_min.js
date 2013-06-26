@@ -1,6 +1,6 @@
 /*  protocalendar.js
  *  (c) 2009 Spookies
- * 
+ *
  *  License : MIT-style license.
  *  Web site: http://labs.spookies.jp/product/protocalendar
  *

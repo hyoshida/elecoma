@@ -56,7 +56,7 @@
          if (dayOfWeek == ProtoCalendar.MONDAY) {
            ++mondayIndex;
          }
-        
+
          /*祝日は削除するためにコメントアウト Edit by ymatsumoto
          if (day == 1 && month == ProtoCalendar.JAN && 1949 <= year) {
            holidays[day] = '元旦';
@@ -119,7 +119,7 @@
                for (; holidays[next]; next += 1) { }
              }
              holidays[next] = '振替休日';
-           
+
            } else if (hasKokuminHoliday && holidays[day - 1] && holidays[day + 1] && !holidays[day]) {
              holidays[day] = '国民の休日';
            }

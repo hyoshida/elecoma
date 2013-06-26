@@ -26,7 +26,7 @@ class CustomerSearchForm < SearchForm
   validates_numericality_of :order_count_down, :only_integer => true, :allow_blank => true, :message => 'は半角数字のみを入力してください。'
   validates_numericality_of :order_count_up, :only_integer => true, :allow_blank => true, :message => 'は半角数字のみを入力してください。'
   validates_format_of :product_code, :with => /^[0-9A-Za-z]+$/, :allow_blank => true, :message => 'は半角英数字のみを入力してください。'
-  
+
   def to_params
     self.attributes.inject({}) do |params,(key,value)|
       if value.is_a? Time
@@ -271,7 +271,7 @@ where
 #{
   from = condition.birthday_from
   to = condition.birthday_to
-  
+
   unless from.blank? && to.blank?
     if !from.blank? && !to.blank?
       "and (#{MergeAdapterUtil.convert_time_to_yyyymmdd('c.birthday')} >= '#{from.strftime("%Y%m%d")}'
@@ -289,7 +289,7 @@ where
   end}
 #{if condition.reachable == '1'
     "and c.reachable = '1'"
-  end}  
+  end}
 #{unless condition.tel_no.blank?
     conditions << "%#{condition.tel_no}%"
     "and (#{MergeAdapterUtil.concat('c.tel01', 'c.tel02', 'c.tel03')}) like ? "
@@ -353,7 +353,7 @@ where
 }
 order by c.id
 EOS
-  return [sql_condition, conditions] 
+  return [sql_condition, conditions]
   end
 
 end

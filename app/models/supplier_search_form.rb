@@ -25,7 +25,7 @@ class SupplierSearchForm < SearchForm
 from
 suppliers s
 where
-(s.deleted_at IS NULL OR s.deleted_at > '#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}') 
+(s.deleted_at IS NULL OR s.deleted_at > '#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}')
 #{unless condition.supplier_id.blank?
     conditions << condition.supplier_id.to_i
     "and s.id = ?"
@@ -45,7 +45,7 @@ where
 #{unless condition.fax_no.blank?
     conditions << "%#{condition.fax_no}%"
     "and (#{MergeAdapterUtil.concat('s.fax01', 's.fax02', 's.fax03')}) like ? "
-  end}  
+  end}
 #{unless condition.email.blank?
     conditions << "%#{condition.email}%"
     "and s.email like ? "
@@ -56,7 +56,7 @@ where
 end}
 order by s.id
 EOS
-  return [sql_condition, conditions] 
+  return [sql_condition, conditions]
   end
 
 end

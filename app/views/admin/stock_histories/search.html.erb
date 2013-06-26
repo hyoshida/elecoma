@@ -20,7 +20,7 @@
       <th>操作者</th>
       <th>詳細</th>
     </tr>
-<%unless @stock_histories.blank?%>	
+<%unless @stock_histories.blank?%>
     <% @stock_histories.each do | sh | %>
       <tr>
         <td><%= h sh.product_style.product_id %></td>

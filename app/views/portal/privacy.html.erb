@@ -6,7 +6,7 @@
 
   <ol id="bread_list" class="m_btm"><li class="bread_top"><%= link_to "トップページ", :controller => 'portal', :action => 'show' %></li><li>個人情報保護方針・個人情報の取り扱いについて
  </li></ol>
-  
+
   <h2 class="main_t">個人情報保護方針・個人情報の取り扱いについて</h2>
 	<%if (!@privacy.blank? && !@privacy.content_privacy.blank?)%>
 	<%= @privacy.content_privacy %>

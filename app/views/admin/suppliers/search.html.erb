@@ -24,7 +24,7 @@
       <th>編集</th>
       <th>削除</th>
     </tr>
-<%unless @suppliers.blank?%>	
+<%unless @suppliers.blank?%>
     <% @suppliers.each do | supplier | %>
       <tr>
         <td><%= h supplier.id %></td>
@@ -39,9 +39,9 @@
 		  <% end%>
         </td>
         <td class="t_center">
-          <% if supplier.id != Supplier::DEFAULT_SUPPLIER_ID && supplier.products.blank?%>	
+          <% if supplier.id != Supplier::DEFAULT_SUPPLIER_ID && supplier.products.blank?%>
 			<%= link_to "削除", :action=>"destroy" ,:id=>supplier.id %>
-		  <% end%>	
+		  <% end%>
         </td>
       </tr>
     <% end %>

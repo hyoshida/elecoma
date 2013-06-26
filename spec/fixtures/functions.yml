@@ -1,4 +1,4 @@
-<% open("#{RAILS_ROOT}/db/migrate/fixed_data/functions.yml").each_line do | fixture | %> 
+<% open("#{RAILS_ROOT}/db/migrate/fixed_data/functions.yml").each_line do | fixture | %>
 <%= fixture %>
 <% end %>
 F1000:
@@ -8,7 +8,7 @@ F1000:
   position: 1000
 F1001:
   id: 42
-  name: 在庫管理　
+  name: 在庫管理
   code: "stock"
   position: 1001
 F1002:
