@@ -28,7 +28,7 @@
   <tr>
     <th>カテゴリー名<span class="pnt">※</span></th>
     <td>
-      <%= confirm_tag :category_select, :product, :category_id %>
+      <%= confirm_tag :category_select, :product, :category_id, selected: @product.category_id.to_s %>
     </td>
   </tr>
   <tr>
